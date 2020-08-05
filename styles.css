@@ -1,5 +1,14 @@
-.displayBox{
-    width: 500px;
-    height: 700px;
-    border: 1px solid black;
+#displayBox{
+    border: 5px solid darkred;
+    overflow: scroll;
+    margin: 0px auto;
+    text-align: center;
 }
+.smallContainer{
+    margin: 0px auto;
+    width: 50%;
+    text-align: center;
+    border: 1px solid green;
+    padding: 20px;
+}
+
