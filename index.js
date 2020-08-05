@@ -420,10 +420,16 @@ window.addEventListener("load",()=>{
         let display = document.getElementById("smallContainer");
         let bottomScroll = document.documentElement.scrollHeight-(window.innerHeight + window.pageYOffset);
         if(bottomScroll < 40){
-            for(let i = 0; i < 25; i ++){
-                let h1 = document.createElement("h1");
-                h1.textContent = "Masai Student" + " " + count ++;
-                display.append(h1);
+
+            //Throttling logic
+            setTimeout(appendIt,1000);
+
+            function appendIt() {
+                for (let i = 0; i < 25; i++) {
+                    let h1 = document.createElement("h1");
+                    h1.textContent = "Masai Student" + " " + count++;
+                    display.append(h1);
+                }
             }
         }
     }
